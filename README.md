@@ -181,6 +181,10 @@ Video/batch workflow documentation:
 
 - [README_video_project.md](README_video_project.md)
 
+Interactive Jupyter workflow:
+
+- [mouse_pupil_extraction_demo.ipynb](mouse_pupil_extraction_demo.ipynb): step-by-step image analysis plus single-video and batch-video analysis cells.
+
 ## 中文快速开始
 
 安装：
@@ -218,4 +222,3 @@ pupil_video_output/experiment01/
 ## Notes
 
 The QC confidence score is an interpretable heuristic quality score, not a probability calibrated from manual annotations. For publication-grade use, validate the workflow against manually annotated frames from representative videos.
-
