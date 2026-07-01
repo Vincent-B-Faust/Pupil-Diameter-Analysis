@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mouse-pupil-finding"
+version = "0.1.0"
+description = "Mouse pupil extraction and video diameter analysis with QC metrics."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "opencv-python>=4.8",
+  "numpy>=1.23",
+  "pandas>=1.5",
+  "matplotlib>=3.6",
+]
+
+[project.scripts]
+pupil-find = "pupil_finding.cli:main"
+
+[tool.setuptools]
+packages = ["pupil_finding"]

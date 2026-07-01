@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.env
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated analysis outputs
+pupil_output/
+pupil_video_output/
+pupil_project_test_output/
+outputs/
+sessions/
+
+# Large/raw videos are usually user data
+*.avi
+*.mp4
+*.mov
+*.mkv
+*.m4v
+*.wmv
+
+# macOS / editor
+.DS_Store
+*.swp
+*.swo
+
