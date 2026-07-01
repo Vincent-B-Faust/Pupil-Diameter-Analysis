@@ -4,10 +4,22 @@ This project packages the mouse pupil extraction workflow into a reusable Python
 
 ## Install
 
-From this directory:
+Use an isolated environment. Do not install into conda `base`.
+
+Recommended conda setup:
 
 ```bash
-/opt/anaconda3/bin/python -m pip install -e .
+git clone https://github.com/Vincent-B-Faust/Pupil-Diameter-Analysis.git
+cd Pupil-Diameter-Analysis
+bash scripts/setup_conda.sh
+conda activate pupil-diameter-analysis
+```
+
+Alternative venv setup:
+
+```bash
+bash scripts/setup_venv.sh
+source .venv/bin/activate
 ```
 
 The console command will then be available as:
@@ -16,11 +28,7 @@ The console command will then be available as:
 pupil-find --help
 ```
 
-You can also run it without installation:
-
-```bash
-/opt/anaconda3/bin/python -m pupil_finding.cli --help
-```
+See [docs/INSTALL.md](docs/INSTALL.md) for detailed setup and troubleshooting.
 
 ## Analyze One Image
 

@@ -22,38 +22,56 @@ Python tools for extracting mouse pupil boundaries from images and videos, estim
 
 ```text
 .
+├── docs/
+│   └── INSTALL.md      # isolated environment setup guide
 ├── pupil_finding/
 │   ├── core.py          # image-level ROI detection, pupil extraction, QC
 │   ├── video.py         # video and batch processing, plotting, sessions
 │   └── cli.py           # command-line interface
+├── scripts/
+│   ├── setup_conda.sh   # recommended isolated conda setup
+│   └── setup_venv.sh    # local Python venv setup
 ├── mouse_pupil_extraction_demo.ipynb
 ├── README_pupil_extraction_method.md
 ├── README_video_project.md
+├── environment.yml
 ├── pyproject.toml
 └── requirements.txt
 ```
 
-## Installation
+## Installation Without Polluting `base`
 
-From the repository root:
+Use an isolated environment. Do not install into conda `base`.
 
-```bash
-python -m pip install -e .
-```
-
-If you do not want editable install:
+### Recommended: Conda
 
 ```bash
-python -m pip install -r requirements.txt
+git clone https://github.com/Vincent-B-Faust/Pupil-Diameter-Analysis.git
+cd Pupil-Diameter-Analysis
+bash scripts/setup_conda.sh
+conda activate pupil-diameter-analysis
 ```
 
-Run the CLI:
+This creates a dedicated environment and registers a Jupyter kernel:
+
+```text
+Python (pupil-diameter-analysis)
+```
+
+### Alternative: venv
 
 ```bash
-python -m pupil_finding.cli --help
+git clone https://github.com/Vincent-B-Faust/Pupil-Diameter-Analysis.git
+cd Pupil-Diameter-Analysis
+bash scripts/setup_venv.sh
+source .venv/bin/activate
 ```
 
-After editable installation, the console script is also available:
+Full installation details:
+
+- [docs/INSTALL.md](docs/INSTALL.md)
+
+Run the CLI after activating the environment:
 
 ```bash
 pupil-find --help
@@ -187,10 +205,22 @@ Interactive Jupyter workflow:
 
 ## 中文快速开始
 
-安装：
+建议使用独立环境，避免污染 conda `base` 环境。
+
+推荐 conda 安装：
 
 ```bash
-python -m pip install -e .
+git clone https://github.com/Vincent-B-Faust/Pupil-Diameter-Analysis.git
+cd Pupil-Diameter-Analysis
+bash scripts/setup_conda.sh
+conda activate pupil-diameter-analysis
+```
+
+或使用本地 venv：
+
+```bash
+bash scripts/setup_venv.sh
+source .venv/bin/activate
 ```
 
 单个视频分析：
